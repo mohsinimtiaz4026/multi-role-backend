@@ -24,4 +24,5 @@ app.use("/api", require("./routers"));
 dotenv.config({ debug: false });
 const PORT = process.env.PORT || 5000;
 
+// server listening
 app.listen(PORT, () => console.log(`server on http://localhost:${PORT}`));
