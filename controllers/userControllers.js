@@ -122,4 +122,12 @@ module.exports = {
       return res.status(500).send({ message: "internal server error" });
     }
   },
+  logoutUserRequest: async (req, res) => {
+    try {
+      userServices.logoutUser();
+      return res.status(200).send({ message: "Users Logout Successfully!" });
+    } catch (error) {
+      return res.status(500).send({ message: "internal server error" });
+    }
+  },
 };
