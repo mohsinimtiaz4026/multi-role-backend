@@ -18,7 +18,6 @@ const isAdmin = async (req, res, next) => {
         .status(404)
         .send({ message: "Unauthorized: User not found!" });
     }
-    console.log(user);
     if(user.role !== "admin") {
         return res
         .status(404)

@@ -137,6 +137,16 @@ module.exports = {
       };
     }
   },
+  logoutUser: (req, res) => {
+    try {
+      res.clearCookie("token");
+    } catch (error) {
+      return {
+        success: false,
+        error,
+      };
+    }
+  },
   getUsers: async () => {
     try {
       const allUsers = await User.find({});
