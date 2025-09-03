@@ -5,9 +5,10 @@ const { userControllers } = require("../controllers");
 const authToken = require("../middlewares/authMiddleware");
 const refreshToken = require("../middlewares/refreshMiddleware");
 
-route.post("/register", authToken, userControllers.registerUser);
-route.post("/login", authToken, userControllers.loginUser);
+route.post("/register", userControllers.registerUser);
+route.post("/login", userControllers.loginUser);
 route.post("/update", userControllers.updateUserRequest);
 route.post("/delete", userControllers.deleteUserRequest);
+route.post("/logout",userControllers.logoutUserRequest);
 
 module.exports = route;
