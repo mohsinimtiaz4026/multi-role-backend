@@ -1,6 +1,8 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 
-mongoose.connect(`mongodb://localhost:27017/mvp-db`).then(() => {
+mongoose
+  .connect(`mongodb://localhost:27017/mohsin-mvp-db`)
+  .then(() => {
     console.log(`db connected`);
   })
   .catch((e) => {
